@@ -25,5 +25,8 @@ module.exports = {
     'no-use-before-define': ['error', { functions: false }],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/react-in-jsx-scope': 'off',
+    'import/prefer-default-export': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    // 'react/prop-types': 'off',
   },
 };
