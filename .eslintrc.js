@@ -11,6 +11,14 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx'],
+        moduleDirectory: ['node_modules', 'src/'],
+      },
+    },
+  },
   plugins: ['react', 'prettier'],
   rules: {
     'no-unused-vars': 'warn',
