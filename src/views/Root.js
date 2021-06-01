@@ -1,8 +1,16 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
 import Form from 'features/Form/Form';
+import Seats from 'features/Seats/Seats';
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Root = () => {
   const showValues = (values) => {
@@ -12,9 +20,10 @@ const Root = () => {
 
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <div className="App">
+      <Wrapper className="App">
         <Form formValues={showValues} />
-      </div>
+        <Seats />
+      </Wrapper>
     </ThemeProvider>
   );
 };
